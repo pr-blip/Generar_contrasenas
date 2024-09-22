@@ -11,6 +11,7 @@ body {
     display: flex; 
     align-items: center;
     justify-content: center;
+    position: relative;
     
 }
 
@@ -18,7 +19,7 @@ body::before {
     background-image: url("img/candado.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: cover;
+    background-size: contain;
     content: "";
     display: block;
     position: absolute;
@@ -40,6 +41,7 @@ body::before {
     background-size: 100% 100%;
     position: relative;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .container__contenido {
@@ -149,6 +151,34 @@ h1 {
     font-family: 'Inter', sans-serif;
     display: flex;  
 }
+@media (max-width: 768px) {
+    .container{
+        flex-direction:colum;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .container__informacion {
+        padding: 1 rem;
+    }
+
+    .container__input, .container__contaseña, .container__limpiar {
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    .boton {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+     
+
 
 
    
